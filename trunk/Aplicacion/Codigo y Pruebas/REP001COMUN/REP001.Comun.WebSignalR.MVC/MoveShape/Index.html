@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        #divShape
+        {
+          width:100px;
+          height:100px;
+          background-color:#0094ff;
+          cursor:move;
+          position:relative;
+        }
+        #divShape1
+        {
+          width:100px;
+          height:100px;
+          background-color:#f00;
+          cursor:move;
+          position:relative;
+
+        }
+    </style>
+</head>
+<body>
+    <script src="../Scripts/jquery-2.0.0.js"></script>
+    <script src="../Scripts/jquery.signalR-1.0.1.js"></script>
+    <script src="../Scripts/jquery-ui-1.10.2.js"></script>
+    <script src="/signalr/hubs"></script>
+
+    <script>
+        $(function () {
+            var hub = $.connection.moveShapeHub;
+            var $shape = $('#divShape');
+            var $shape2 = $('#divShape1');
+
+            hub.client.actionShapeMoved = function (x, y) {
+                $shape.css({left:x,top:y})
+            };
+
+            hub.client.actionShapeMoved1 = function (x, y) {
+                $shape2.css({ left: x, top: y });
+            };
+
+            $.connection.hub.start().done(function () {
+                $shape.draggable({
+                    drag: function () {
+                        hub.server.moveShape(this.offsetLeft,this.offsetTop || 0);
+                    }
+                });
+
+                $shape2.draggable({
+                    drag: function () {
+                        hub.server.moveShape1(this.offsetLeft,this.offsetTop||0);
+                    }
+                });
+            });
+        });
+
+    </script>
+
+    <div id="divShape">
+
+    </div>
+    <div id="divShape1">
+
+    </div>
+</body>
+</html>

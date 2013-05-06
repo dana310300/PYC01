@@ -1,0 +1,99 @@
+﻿@model IEnumerable<REP001.Comun.WebAPI.MVC.Models.Person>
+
+@{
+    var datos = Model;    
+}
+
+@{
+    ViewBag.Title = "Person";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ @Scripts.Render("~/bundles/jquery")
+ @Scripts.Render("~/bundles/jqueryui")
+ @Scripts.Render("~/bundles/knockout")
+
+<h2>Person</h2>
+<table>
+    @foreach (var item in datos) {
+    <tr>
+        <td>
+             Nombre:
+        </td>
+        <td>
+           <label>@item.ID: @item.Name</label>
+        </td>
+    </tr>
+    }
+</table>
+
+<br />
+<div id="person">
+
+</div>
+
+<p>ID: <strong data-bind="text:ID"></strong></p>
+<p>Name: <strong data-bind="text:Name"></strong></p>
+<p>LastName: <input data-bind="value:LastName" /></p>
+<p>FullName: <strong data-bind="text:FullName"></strong></p>
+
+<br />
+<br />
+<label>Id</label>
+<input type="text" name="txt" id="txt"  value=" " />
+<br />
+<input type="button" id="btn" name="btn" value=" " />
+<script type="text/javascript">
+    $(document).ready(initPage);
+
+    function initPage() {
+
+        bindControls();
+        // Send an AJAX request
+        $.getJSON("/api/person",
+        function (data) {
+            console.log(data);
+            // On success, 'data' contains a list of products.
+            $.each(data, function (key, val) {
+
+                // Format the text to display.
+                var str = val.Name + '/' + val.ID;
+
+                // Add a list item for the product.
+                $('<li/>', { text: str })
+                .appendTo($('#person'));
+            });
+        });
+    };
+
+    function bindControls() {
+        $('#btn').on('click', function (e) {
+            find();
+        });
+    }
+    function find() {
+        var id = $('#txt').val();
+        console.log(id);
+        $.getJSON("api/person/"+id,
+            function (data) {
+                var str = data.Name + '/' + data.ID;
+                console.log(data);
+                $('#person').text(str);
+            })
+        .fail(
+            function (jqXHR, textStatus, err) {
+                $('#person').text('Error: ' + err);
+            });
+    }
+
+    function AppViewModel() {
+        this.Name =ko.observable('Dani');
+        this.ID = 1;
+        this.LastName = ko.observable("Avila");
+        this.FullName = ko.computed(function () {
+            return this.Name() + " " + this.LastName();
+        }, this);
+    }
+    
+    ko.applyBindings(new AppViewModel());
+    
+</script>

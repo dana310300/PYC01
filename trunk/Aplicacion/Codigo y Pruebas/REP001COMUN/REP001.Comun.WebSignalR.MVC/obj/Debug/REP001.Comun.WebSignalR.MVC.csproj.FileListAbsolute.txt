@@ -1,0 +1,17 @@
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\bin\REP001.Comun.WebSignalR.MVC.dll
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\bin\REP001.Comun.WebSignalR.MVC.pdb
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\bin\Microsoft.AspNet.SignalR.Core.dll
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\bin\Microsoft.AspNet.SignalR.Owin.dll
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\bin\Microsoft.Web.Infrastructure.dll
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\bin\Newtonsoft.Json.dll
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\bin\Owin.dll
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\bin\Microsoft.AspNet.SignalR.Core.xml
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\bin\Microsoft.AspNet.SignalR.Owin.xml
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\bin\Newtonsoft.Json.xml
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\obj\Debug\REP001.Comun.WebSignalR.MVC.csprojResolveAssemblyReference.cache
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\obj\Debug\REP001.Comun.WebSignalR.MVC.dll
+c:\users\davila\documents\visual studio 2012\Projects\REP001\REP001.Comun.WebSignalR.MVC\obj\Debug\REP001.Comun.WebSignalR.MVC.pdb
