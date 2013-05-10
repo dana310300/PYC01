@@ -8,10 +8,8 @@ namespace REP001.Comun.Web.MVC.Models
 {
     public class ArtistDashboardModel
     {
-        public List<Alert> NewsFeed { get; set; }
-        public List<CollaborationSpace> CollaborationSpace { get; set; }
         public List<PlayListItem> ArtistSongs { get; set; }
-        public List<Tast> Tasks { get; set; }
+        public List<Task> Tasks { get; set; }
 
         [Display(Name="Member Since")]
         public DateTime AccountCreateDate { get; set; }
@@ -21,10 +19,12 @@ namespace REP001.Comun.Web.MVC.Models
         public string ProfileBookmark { get; set; }
         public string AvatarURL { get; set; }
         public string ArtistName { get; set; }
+        public Guid ArtistID { get; set; }
+        public string ArtistFullName { get; set; }
         public string ErrorMessage { get; set; }
     }
 
-    public class Tast {
+    public class Task {
         public int ID { get; set; }
         public string Name { get; set; }
         public DateTime FechaRegistro { get; set; }
@@ -34,16 +34,14 @@ namespace REP001.Comun.Web.MVC.Models
         public string Name { get; set; }
         public string Autor { get; set; }
         public DateTime FechaRegistro { get; set; }
+        public Song Song { get; set; }
     }
 
-    public class Alert {
+    public class Song {
         public int ID { get; set; }
         public string Name { get; set; }
+        public string Autor { get; set; }
         public DateTime FechaRegistro { get; set; }
     }
-    public class CollaborationSpace {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public DateTime FechaRegistro { get; set; }
-    }
+   
 }

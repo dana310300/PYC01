@@ -250,6 +250,5 @@ C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Web.MVC\bin\ru\System.Spatial.resources.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Web.MVC\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Web.MVC\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Web.MVC\obj\Debug\REP001.Comun.Web.MVC.csprojResolveAssemblyReference.cache
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Web.MVC\obj\Debug\REP001.Comun.Web.MVC.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Web.MVC\obj\Debug\REP001.Comun.Web.MVC.pdb

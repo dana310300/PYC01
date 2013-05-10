@@ -1,0 +1,4 @@
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO\bin\Debug\REP001.Comun.BO.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO\bin\Debug\REP001.Comun.BO.pdb
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO\obj\Debug\REP001.Comun.BO.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO\obj\Debug\REP001.Comun.BO.pdb

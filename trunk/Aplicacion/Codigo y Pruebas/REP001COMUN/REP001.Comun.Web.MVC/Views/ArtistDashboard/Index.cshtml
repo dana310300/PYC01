@@ -1,10 +1,84 @@
-﻿@model ICollection<REP001.Comun.Web.MVC.Controllers.ArtistDashboardController>
+﻿@model ICollection<REP001.Comun.Web.MVC.Models.ArtistDashboardModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "DashBoard";
 }
+
+@section InlineCss
+{
+<style type="text/css">
+ul { list-style-type:square;}
+.hfeature{ padding: 5px; margin: 5px; }
+.quickLink{ font-size:10pt;}
+#quickLinkContainer{ border-style:solid; border-color:#BBBBBB; border-width:thin; background-color:#DDDDDD;-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; overflow:auto;}
+#DashBoardOuterWrapper{ width:100%; overflow:auto;}
+#profileImg{ float:left; padding-right:15px;}
+#profileStats{float:left;}
+#quickLinks{float:left; padding-right:10px; padding-left:20px; width:54%; }
+#quickLinksLft{float:right;}
+#quickLinksRgt{float:left; }
+#quickLinksLable{text-align:left; border-width:0; clear:both; padding:5px; margin-left:20px;}
+#StatsList{ list-style-type:none; padding:0; }
+#StatsList li{padding-bottom:8px;}
+#changeProfileLnk{ margin-left:5px;}
+#NewsPane, #flowtabs, #flowtabsPanes{ width:98%;}
+#NewPaneRight{ float:right; padding:5px; height:500px; width:60%; margin-right:5px;}
+#NewsPaneLeft{ float:left; width:35%;}
+</style>
+
+}
+
 
 <h2>Index</h2>
 <div>
+    <h3>Acciones</h3>
+    
 
+<br />
+    @Scripts.Render("~/bundles/jquery")
+    <div id="DashBoardOuterWrapper">
+     
+         @Html.Action("ArtistInfo","ArtistDashboard")  
+  @*   @Html.Partial("_ArtistInfoPartial")*@
+        <br />
+        
+       @foreach (var item in Model)
+       {
+           
+        <div id="profileImg">
+            <img alt="Your Profile Image" class="AristImage" ID="avitarImage" src="@item.AvatarURL" />
+        <br/>
+        </div>
+   
+           <div id="profileStats">
+              <ul id="StatsList">
+                  <li class="art">              
+                    @item.ArtistName
+
+                       <div id="SongWrapper"> 
+                           @foreach( var art in item.ArtistSongs){
+                        <div class="NewsItem">
+                            @art.Song.Name , 
+                            @art.Song.Autor
+                            <br />
+                        </div>
+                        }
+                    </div> 
+                </li>
+
+              </ul>
+               
+           </div>
+           
+           <br /><br />
+           
+          
+       }
+      
+       
+    </div>
+   
+     
 </div>

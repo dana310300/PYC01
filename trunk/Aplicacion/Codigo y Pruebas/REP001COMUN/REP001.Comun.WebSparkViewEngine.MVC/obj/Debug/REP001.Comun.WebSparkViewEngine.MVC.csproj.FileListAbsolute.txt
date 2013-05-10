@@ -32,6 +32,5 @@ C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\System.Web.WebPages.xml
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\System.Web.WebPages.Deployment.xml
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\System.Web.WebPages.Razor.xml
-C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\obj\Debug\REP001.Comun.WebSparkViewEngine.MVC.csprojResolveAssemblyReference.cache
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\obj\Debug\REP001.Comun.WebSparkViewEngine.MVC.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\obj\Debug\REP001.Comun.WebSparkViewEngine.MVC.pdb

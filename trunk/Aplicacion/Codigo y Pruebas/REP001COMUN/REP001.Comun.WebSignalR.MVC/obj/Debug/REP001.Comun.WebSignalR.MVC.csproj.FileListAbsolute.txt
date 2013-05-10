@@ -46,6 +46,6 @@ C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSignalR.MVC\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSignalR.MVC\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSignalR.MVC\bin\Newtonsoft.Json.xml
-C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSignalR.MVC\obj\Debug\REP001.Comun.WebSignalR.MVC.csprojResolveAssemblyReference.cache
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSignalR.MVC\obj\Debug\REP001.Comun.WebSignalR.MVC.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSignalR.MVC\obj\Debug\REP001.Comun.WebSignalR.MVC.pdb
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSignalR.MVC\obj\Debug\REP001.Comun.WebSignalR.MVC.csprojResolveAssemblyReference.cache

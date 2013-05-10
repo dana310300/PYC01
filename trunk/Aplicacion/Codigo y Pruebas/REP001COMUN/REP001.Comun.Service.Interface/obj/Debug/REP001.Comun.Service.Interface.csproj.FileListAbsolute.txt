@@ -1,0 +1,7 @@
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Interface\bin\Debug\REP001.Comun.Service.Interface.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Interface\bin\Debug\REP001.Comun.Service.Interface.pdb
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Interface\bin\Debug\REP001.Comun.BO.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Interface\bin\Debug\REP001.Comun.BO.pdb
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Interface\obj\Debug\REP001.Comun.Service.Interface.csprojResolveAssemblyReference.cache
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Interface\obj\Debug\REP001.Comun.Service.Interface.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Interface\obj\Debug\REP001.Comun.Service.Interface.pdb

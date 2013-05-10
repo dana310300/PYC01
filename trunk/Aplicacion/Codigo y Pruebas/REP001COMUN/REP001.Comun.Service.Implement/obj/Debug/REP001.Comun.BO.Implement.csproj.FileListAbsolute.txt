@@ -1,0 +1,5 @@
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Implement\bin\Debug\REP001.Comun.BO.Implement.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Implement\bin\Debug\REP001.Comun.BO.Implement.pdb
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Implement\obj\Debug\REP001.Comun.BO.Implement.csprojResolveAssemblyReference.cache
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Implement\obj\Debug\REP001.Comun.BO.Implement.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Implement\obj\Debug\REP001.Comun.BO.Implement.pdb

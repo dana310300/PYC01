@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "_ArtistInfoPartial";
+}
+
+<h2>Informacion del Artista</h2>
+
+<div>
+
+    @foreach (var item in Model)
+    {
+     <div>
+         <input type="text" id="txtName" value="@(item.ArtistFullName)" />
+     </div>      
+        <div id="quickLink">
+            @item.ArtistFullName
+            <br />
+        </div>
+           //id="btnAddArt-@(item.ArtistID)"
+        <input type="button" id="btnAddArt" value="Agregar" text="@(item.ArtistID)"/>
+        
+       
+       }
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('input[id$=btnAddArt]').on('click', function () {
+            console.log('test');
+        });
+
+        $('input[id$=txtName]').bind('cut copy paste', function (e) {
+            e.preventDefault();
+            console.log('cut copy paste');
+            alert('No es posible')
+        });
+
+    });
+
+
+</script>
