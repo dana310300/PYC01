@@ -10,6 +10,7 @@ namespace REP001.Comun.Service.Interface
         Person Create(Person p);
         void Delete(Person p);
         Person Retrieve(Person p);
-        List<Person> RetrievePersons(Person p);
+        void Edit(Person p);
+        List<Person> RetrievePersons();
     }
 }

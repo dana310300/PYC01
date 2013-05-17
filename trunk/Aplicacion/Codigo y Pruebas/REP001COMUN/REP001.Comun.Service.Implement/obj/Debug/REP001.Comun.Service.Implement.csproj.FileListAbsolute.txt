@@ -1,9 +1,14 @@
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\bin\Debug\REP001.Comun.Service.Implement.dll.config
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\bin\Debug\REP001.Comun.Service.Implement.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\bin\Debug\REP001.Comun.Service.Implement.pdb
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\bin\Debug\EntityFramework.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\bin\Debug\REP001.Comun.BO.Context.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\bin\Debug\REP001.Comun.BO.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\bin\Debug\REP001.Comun.Service.Interface.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\bin\Debug\REP001.Comun.BO.Context.pdb
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\bin\Debug\REP001.Comun.BO.pdb
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\bin\Debug\REP001.Comun.Service.Interface.pdb
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\bin\Debug\EntityFramework.xml
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\obj\Debug\REP001.Comun.Service.Implement.csprojResolveAssemblyReference.cache
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\obj\Debug\REP001.Comun.Service.Implement.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\obj\Debug\REP001.Comun.Service.Implement.pdb
-C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\bin\Debug\REP001.Comun.Service.Interface.dll
-C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.Service.Implement\bin\Debug\REP001.Comun.Service.Interface.pdb

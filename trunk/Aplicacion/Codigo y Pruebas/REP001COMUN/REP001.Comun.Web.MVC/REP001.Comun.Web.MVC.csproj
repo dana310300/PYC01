@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -60,9 +64,6 @@
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -183,7 +184,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArtistDashboardController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -314,12 +317,36 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\ArtistDashboard\Index.cshtml" />
     <Content Include="Views\ArtistDashboard\_ArtistInfoPartial.cshtml" />
+    <Content Include="Views\Person\Index.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Employee\Details.cshtml" />
+    <Content Include="Views\Employee\Create.cshtml" />
+    <Content Include="Views\Employee\Edit.cshtml" />
+    <Content Include="Views\Employee\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\REP001.Comun.BO.Context\REP001.Comun.BO.Context.csproj">
+      <Project>{ef399378-35ca-4cdf-8791-0392a427f610}</Project>
+      <Name>REP001.Comun.BO.Context</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\REP001.Comun.BO\REP001.Comun.BO.csproj">
+      <Project>{7a892e6a-f200-4ffe-bc86-a187e6f11cf4}</Project>
+      <Name>REP001.Comun.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\REP001.Comun.Service.Implement\REP001.Comun.Service.Implement.csproj">
+      <Project>{bf921742-ea91-44c8-b687-207513aadd2e}</Project>
+      <Name>REP001.Comun.Service.Implement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\REP001.Comun.Service.Interface\REP001.Comun.Service.Interface.csproj">
+      <Project>{b74b9d64-693f-442c-afcc-a86df70e0e55}</Project>
+      <Name>REP001.Comun.Service.Interface</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -337,7 +364,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>52167</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:64766/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

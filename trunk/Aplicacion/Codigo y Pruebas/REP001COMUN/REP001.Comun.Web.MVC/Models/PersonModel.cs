@@ -16,7 +16,7 @@ namespace REP001.Comun.Web.MVC.Models
         public string Name { get; set; }
 
         [Required]
-        [Display(DateBird="FechaNacimiento")]
+        [Display(Name="Fecha Nacimiento")]
         public DateTime DateBird { get; set; }
 
         

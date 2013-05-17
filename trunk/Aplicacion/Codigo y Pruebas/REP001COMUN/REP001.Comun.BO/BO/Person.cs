@@ -7,9 +7,9 @@ namespace REP001.Comun.BO
 {
     public class Person
     {
-        public int ID { get; set; }
+        public long? ID { get; set; }
         public string Name { get; set; }
-        public DateTime DateBird { get; set; }
-        public int Age { get { return ((int)((DateBird - DateTime.Today).TotalDays/365) - 1); } }
+        public DateTime? DateBird { get; set; }
+        public int? Age { get { return ((int)( ((DateTime)DateBird - DateTime.Today).TotalDays/365) - 1); } }
     }
 }

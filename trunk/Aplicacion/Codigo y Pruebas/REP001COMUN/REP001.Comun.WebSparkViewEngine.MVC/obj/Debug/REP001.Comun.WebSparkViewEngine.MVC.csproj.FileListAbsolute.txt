@@ -1,7 +1,6 @@
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\REP001.Comun.WebSparkViewEngine.MVC.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\REP001.Comun.WebSparkViewEngine.MVC.pdb
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\Antlr3.Runtime.dll
-C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\EntityFramework.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\Newtonsoft.Json.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\Spark.dll
@@ -20,7 +19,6 @@ C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\System.Web.WebPages.Razor.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\WebActivator.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\WebGrease.dll
-C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\EntityFramework.xml
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\Newtonsoft.Json.xml
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\System.Net.Http.xml
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebSparkViewEngine.MVC\bin\System.Net.Http.Formatting.xml
