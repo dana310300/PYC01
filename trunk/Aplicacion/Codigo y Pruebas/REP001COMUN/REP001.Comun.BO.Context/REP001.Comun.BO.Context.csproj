@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EF399378-35CA-4CDF-8791-0392A427F610}</ProjectGuid>
+    <ProjectGuid>{1C7441FA-B864-4C72-A246-0817ECD63EAD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>REP001.Comun.BO.Context</RootNamespace>
     <AssemblyName>REP001.Comun.BO.Context</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +20,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,13 +28,13 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
@@ -46,10 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\PersonContext.cs" />
-    <Compile Include="Migrations\201305171952056_Initial.cs" />
-    <Compile Include="Migrations\201305171952056_Initial.Designer.cs">
-      <DependentUpon>201305171952056_Initial.cs</DependentUpon>
+    <Compile Include="ComunContext.cs" />
+    <Compile Include="Migrations\201305292227476_Initial.cs" />
+    <Compile Include="Migrations\201305292227476_Initial.Designer.cs">
+      <DependentUpon>201305292227476_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305292310018_Initial1.cs" />
+    <Compile Include="Migrations\201305292310018_Initial1.Designer.cs">
+      <DependentUpon>201305292310018_Initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305292311089_Initial2.cs" />
+    <Compile Include="Migrations\201305292311089_Initial2.Designer.cs">
+      <DependentUpon>201305292311089_Initial2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305292314495_Initial3.cs" />
+    <Compile Include="Migrations\201305292314495_Initial3.Designer.cs">
+      <DependentUpon>201305292314495_Initial3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,8 +75,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201305171952056_Initial.resx">
-      <DependentUpon>201305171952056_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201305292227476_Initial.resx">
+      <DependentUpon>201305292227476_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305292310018_Initial1.resx">
+      <DependentUpon>201305292310018_Initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305292311089_Initial2.resx">
+      <DependentUpon>201305292311089_Initial2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305292314495_Initial3.resx">
+      <DependentUpon>201305292314495_Initial3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

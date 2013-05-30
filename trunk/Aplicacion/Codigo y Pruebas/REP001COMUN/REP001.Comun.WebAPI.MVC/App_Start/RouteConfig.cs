@@ -16,7 +16,8 @@ namespace REP001.Comun.WebAPI.MVC
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional},
+                namespaces: new[] { "REP001.Comun.WebAPI.MVC.Controllers","" }
             );
         }
     }

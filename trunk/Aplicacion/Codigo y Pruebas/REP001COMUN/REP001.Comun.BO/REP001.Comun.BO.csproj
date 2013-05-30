@@ -45,10 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BO\Ciudad.cs" />
     <Compile Include="BO\Employee.cs" />
+    <Compile Include="BO\Estado.cs" />
+    <Compile Include="BO\Localidad.cs" />
+    <Compile Include="BO\Pais.cs" />
     <Compile Include="BO\Person.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BO\Personas.cs" />
+    <Compile Include="BO\Ubicacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

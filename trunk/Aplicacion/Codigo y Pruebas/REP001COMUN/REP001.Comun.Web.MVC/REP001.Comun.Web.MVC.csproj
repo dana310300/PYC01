@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,6 +49,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -182,6 +186,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Comun\ComunAreaRegistration.cs" />
+    <Compile Include="Areas\Comun\Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArtistDashboardController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
@@ -193,10 +199,22 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\ArtistDashboardModel.cs" />
+    <Compile Include="Models\PersonContext.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebService\ComunPersonService.svc.cs">
+      <DependentUpon>ComunPersonService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="WebService\ComunService.svc.cs">
+      <DependentUpon>ComunService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="WebService\IComunPersonService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Comun\Views\Shared\Error.cshtml" />
+    <Content Include="Areas\Comun\Views\Shared\_Layout.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -261,6 +279,16 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Areas\Comun\Views\Web.config" />
+    <Content Include="Areas\Comun\Views\Employee\Index.cshtml" />
+    <Content Include="Areas\Comun\Views\Employee\Details.cshtml" />
+    <Content Include="Areas\Comun\Views\Employee\Create.cshtml" />
+    <Content Include="Areas\Comun\Views\Employee\Edit.cshtml" />
+    <Content Include="Areas\Comun\Views\Employee\Delete.cshtml" />
+    <Content Include="Areas\Comun\Views\_ViewStart.cshtml" />
+    <Content Include="WebService\ComunPersonService.svc" />
+    <Content Include="WebService\ComunService.svc" />
+    <Content Include="Areas\Comun\Views\Employee\_PersonSearchPartial.cshtml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -317,22 +345,27 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\ArtistDashboard\Index.cshtml" />
     <Content Include="Views\ArtistDashboard\_ArtistInfoPartial.cshtml" />
-    <Content Include="Views\Person\Index.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Employee\Details.cshtml" />
     <Content Include="Views\Employee\Create.cshtml" />
     <Content Include="Views\Employee\Edit.cshtml" />
     <Content Include="Views\Employee\Delete.cshtml" />
+    <Content Include="Views\Person\Index.cshtml" />
+    <Content Include="Views\Person\Details.cshtml" />
+    <Content Include="Views\Person\Create.cshtml" />
+    <Content Include="Views\Person\Edit.cshtml" />
+    <Content Include="Views\Person\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Comun\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\REP001.Comun.BO.Context\REP001.Comun.BO.Context.csproj">
-      <Project>{ef399378-35ca-4cdf-8791-0392a427f610}</Project>
+      <Project>{1c7441fa-b864-4c72-a246-0817ecd63ead}</Project>
       <Name>REP001.Comun.BO.Context</Name>
     </ProjectReference>
     <ProjectReference Include="..\REP001.Comun.BO\REP001.Comun.BO.csproj">

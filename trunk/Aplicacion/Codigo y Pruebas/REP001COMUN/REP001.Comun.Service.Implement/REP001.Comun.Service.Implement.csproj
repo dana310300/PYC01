@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\REP001.Comun.BO.Context\REP001.Comun.BO.Context.csproj">
-      <Project>{ef399378-35ca-4cdf-8791-0392a427f610}</Project>
+      <Project>{1c7441fa-b864-4c72-a246-0817ecd63ead}</Project>
       <Name>REP001.Comun.BO.Context</Name>
     </ProjectReference>
     <ProjectReference Include="..\REP001.Comun.BO\REP001.Comun.BO.csproj">

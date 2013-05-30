@@ -147,6 +147,7 @@ C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\Newtonsoft.Json.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\REP001.Comun.BO.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\System.Net.Http.Formatting.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\System.Spatial.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\System.Web.Helpers.dll
@@ -162,6 +163,7 @@ C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\System.Web.WebPages.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\System.Web.WebPages.Razor.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\WebGrease.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\REP001.Comun.BO.pdb
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\EntityFramework.xml
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\Newtonsoft.Json.xml
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\System.Net.Http.Formatting.xml
@@ -205,5 +207,6 @@ C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\ru\System.Spatial.resources.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\obj\Debug\REP001.Comun.WebAPI.MVC.csprojResolveAssemblyReference.cache
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\obj\Debug\REP001.Comun.WebAPI.MVC.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebAPI.MVC\obj\Debug\REP001.Comun.WebAPI.MVC.pdb

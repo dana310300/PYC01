@@ -1,0 +1,13 @@
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Context\bin\Debug\REP001.Comun.BO.Context.dll.config
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Context\bin\Debug\REP001.Comun.BO.Context.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Context\bin\Debug\REP001.Comun.BO.Context.pdb
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Context\bin\Debug\EntityFramework.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Context\bin\Debug\REP001.Comun.BO.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Context\bin\Debug\REP001.Comun.BO.pdb
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Context\bin\Debug\EntityFramework.xml
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Context\obj\Debug\REP001.Comun.BO.Context.csprojResolveAssemblyReference.cache
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Context\obj\Debug\REP001.Comun.BO.Context.dll
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Context\obj\Debug\REP001.Comun.BO.Context.pdb
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Context\obj\Debug\REP001.Comun.BO.Context.Migrations.Initial.resources
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Context\obj\Debug\REP001.Comun.BO.Context.csproj.GenerateResource.Cache
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.BO.Context\obj\Debug\REP001.Comun.BO.Context.Migrations.Initial2.resources

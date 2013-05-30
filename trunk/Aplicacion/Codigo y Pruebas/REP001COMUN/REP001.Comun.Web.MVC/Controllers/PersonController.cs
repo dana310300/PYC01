@@ -1,36 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using REP001.Comun.BO;
 using REP001.Comun.BO.Context;
 
-using REP001.Comun.Service.Implement;
-
 namespace REP001.Comun.Web.MVC.Controllers
 {
     public class PersonController : Controller
     {
-       private PersonContext db = new PersonContext();
-       private PersonService personService = new PersonService();
+        private ComunContext db = new ComunContext();
 
         //
         // GET: /Person/
 
         public ActionResult Index()
         {
-            return View(personService.RetrievePersons());
+            return View(db.Person.ToList());
         }
 
         //
-        // GET: /Home/Details/5
+        // GET: /Person/Details/5
 
-        public ActionResult Details(int id = 0)
+        public ActionResult Details(long id = 0)
         {
-            //Artist artist = db.Artists.Find(id);
-            Person person = new Person { ID = id };
-            person = personService.Retrieve(person);
+            Person person = db.Person.Find(id);
             if (person == null)
             {
                 return HttpNotFound();
@@ -39,7 +36,7 @@ namespace REP001.Comun.Web.MVC.Controllers
         }
 
         //
-        // GET: /Home/Create
+        // GET: /Person/Create
 
         public ActionResult Create()
         {
@@ -47,56 +44,28 @@ namespace REP001.Comun.Web.MVC.Controllers
         }
 
         //
-        // POST: /Home/Create
+        // POST: /Person/Create
 
         [HttpPost]
-        public ActionResult Create(Person p)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Person person)
         {
             if (ModelState.IsValid)
             {
-               p=personService.Create(p);
-               if (p != null) {
-                   return RedirectToAction("Index");
-               }
-              
-            }
-
-            return View(p);
-        }
-
-        //
-        // GET: /Home/Edit/5
-
-        public ActionResult Edit(int id = 0)
-        {
-            Person person = db.Persons.Find(id);
-            if (person == null)
-            {
-                return HttpNotFound();
-            }
-            return View(person);
-        }
-
-        //
-        // POST: /Home/Edit/5
-
-        [HttpPost]
-        public ActionResult Edit(Person p)
-        {
-            if (ModelState.IsValid)
-            {
-                personService.Edit(p);
+                db.Person.Add(person);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(p);
+
+            return View(person);
         }
 
         //
-        // GET: /Home/Delete/5
+        // GET: /Person/Edit/5
 
-        public ActionResult Delete(int id = 0)
+        public ActionResult Edit(long id = 0)
         {
-            Person person = db.Persons.Find(id);
+            Person person = db.Person.Find(id);
             if (person == null)
             {
                 return HttpNotFound();
@@ -105,23 +74,51 @@ namespace REP001.Comun.Web.MVC.Controllers
         }
 
         //
-        // POST: /Home/Delete/5
+        // POST: /Person/Edit/5
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Person person)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(person).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(person);
+        }
+
+        //
+        // GET: /Person/Delete/5
+
+        public ActionResult Delete(long id = 0)
+        {
+            Person person = db.Person.Find(id);
+            if (person == null)
+            {
+                return HttpNotFound();
+            }
+            return View(person);
+        }
+
+        //
+        // POST: /Person/Delete/5
 
         [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int id)
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(long id=0)
         {
-            Person person = db.Persons.Find(id);
-            if (person != null)
-            {
-                personService.Delete(person);
-                return RedirectToAction("Index");
-            }
-            else {
-                return HttpNotFound();
-            }
-           
+            Person person = db.Person.Find(id);
+            db.Person.Remove(person);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
-       
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }

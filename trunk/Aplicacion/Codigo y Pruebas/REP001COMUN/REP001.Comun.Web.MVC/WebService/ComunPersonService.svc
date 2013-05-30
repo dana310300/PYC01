@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="REP001.Comun.Web.MVC.WebService.ComunPersonService" CodeBehind="ComunPersonService.svc.cs" %>

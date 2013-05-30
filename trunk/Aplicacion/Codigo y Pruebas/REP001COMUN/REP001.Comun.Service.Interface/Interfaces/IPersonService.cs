@@ -12,5 +12,6 @@ namespace REP001.Comun.Service.Interface
         Person Retrieve(Person p);
         void Edit(Person p);
         List<Person> RetrievePersons();
+        List<Person> RetrievePersonsByName(string name);
     }
 }

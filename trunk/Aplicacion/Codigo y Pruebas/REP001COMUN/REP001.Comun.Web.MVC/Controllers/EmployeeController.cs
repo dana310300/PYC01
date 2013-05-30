@@ -13,14 +13,14 @@ namespace REP001.Comun.Web.MVC.Controllers
 {
     public class EmployeeController : Controller
     {
-        private PersonContext db = new PersonContext();
-
+        private ComunContext db = new ComunContext();
+      
         //
         // GET: /Employee/
 
         public ActionResult Index()
         {
-            return View(db.Employees.ToList());
+            return View(db.Employee.ToList());
         }
 
         //
@@ -28,7 +28,7 @@ namespace REP001.Comun.Web.MVC.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            Employee employee = db.Employees.Find(id);
+            Employee employee = db.Employee.Find(id);
             if (employee == null)
             {
                 return HttpNotFound();
@@ -52,7 +52,7 @@ namespace REP001.Comun.Web.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Employees.Add(employee);
+                db.Employee.Add(employee);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -60,12 +60,11 @@ namespace REP001.Comun.Web.MVC.Controllers
             return View(employee);
         }
 
-        //
-        // GET: /Employee/Edit/5
 
+     
         public ActionResult Edit(int id = 0)
         {
-            Employee employee = db.Employees.Find(id);
+            Employee employee = db.Employee.Find(id);
             if (employee == null)
             {
                 return HttpNotFound();
@@ -75,6 +74,20 @@ namespace REP001.Comun.Web.MVC.Controllers
 
         //
         // POST: /Employee/Edit/5
+
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Edit(Employee employee)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Entry(employee).State = EntityState.Modified;
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+        //    return View(employee);
+        //}
+
 
         [HttpPost]
         public ActionResult Edit(Employee employee)
@@ -93,7 +106,7 @@ namespace REP001.Comun.Web.MVC.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            Employee employee = db.Employees.Find(id);
+            Employee employee = db.Employee.Find(id);
             if (employee == null)
             {
                 return HttpNotFound();
@@ -107,8 +120,8 @@ namespace REP001.Comun.Web.MVC.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            Employee employee = db.Employees.Find(id);
-            db.Persons.Remove(employee);
+            Employee employee = db.Employee.Find(id);
+            db.Employee.Remove(employee);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
