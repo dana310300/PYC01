@@ -23,6 +23,21 @@ namespace REP001.Comun.WebClient.MVC.PersonWebServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Ap1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Ap2Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime BirdDayField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] ImgField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ImgDirField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -32,6 +47,71 @@ namespace REP001.Comun.WebClient.MVC.PersonWebServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ap1 {
+            get {
+                return this.Ap1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Ap1Field, value) != true)) {
+                    this.Ap1Field = value;
+                    this.RaisePropertyChanged("Ap1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ap2 {
+            get {
+                return this.Ap2Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Ap2Field, value) != true)) {
+                    this.Ap2Field = value;
+                    this.RaisePropertyChanged("Ap2");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime BirdDay {
+            get {
+                return this.BirdDayField;
+            }
+            set {
+                if ((this.BirdDayField.Equals(value) != true)) {
+                    this.BirdDayField = value;
+                    this.RaisePropertyChanged("BirdDay");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] Img {
+            get {
+                return this.ImgField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImgField, value) != true)) {
+                    this.ImgField = value;
+                    this.RaisePropertyChanged("Img");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ImgDir {
+            get {
+                return this.ImgDirField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImgDirField, value) != true)) {
+                    this.ImgDirField = value;
+                    this.RaisePropertyChanged("ImgDir");
+                }
             }
         }
         
@@ -67,6 +147,18 @@ namespace REP001.Comun.WebClient.MVC.PersonWebServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPersonWebService/DoSearchByName", ReplyAction="http://tempuri.org/IPersonWebService/DoSearchByNameResponse")]
         System.Threading.Tasks.Task<REP001.Comun.WebClient.MVC.PersonWebServiceReference.PersonInfo[]> DoSearchByNameAsync(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPersonWebService/DoSearchByID", ReplyAction="http://tempuri.org/IPersonWebService/DoSearchByIDResponse")]
+        string[] DoSearchByID(long id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPersonWebService/DoSearchByID", ReplyAction="http://tempuri.org/IPersonWebService/DoSearchByIDResponse")]
+        System.Threading.Tasks.Task<string[]> DoSearchByIDAsync(long id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPersonWebService/DoImageSearch", ReplyAction="http://tempuri.org/IPersonWebService/DoImageSearchResponse")]
+        byte[] DoImageSearch(long id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPersonWebService/DoImageSearch", ReplyAction="http://tempuri.org/IPersonWebService/DoImageSearchResponse")]
+        System.Threading.Tasks.Task<byte[]> DoImageSearchAsync(long id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -102,6 +194,22 @@ namespace REP001.Comun.WebClient.MVC.PersonWebServiceReference {
         
         public System.Threading.Tasks.Task<REP001.Comun.WebClient.MVC.PersonWebServiceReference.PersonInfo[]> DoSearchByNameAsync(string name) {
             return base.Channel.DoSearchByNameAsync(name);
+        }
+        
+        public string[] DoSearchByID(long id) {
+            return base.Channel.DoSearchByID(id);
+        }
+        
+        public System.Threading.Tasks.Task<string[]> DoSearchByIDAsync(long id) {
+            return base.Channel.DoSearchByIDAsync(id);
+        }
+        
+        public byte[] DoImageSearch(long id) {
+            return base.Channel.DoImageSearch(id);
+        }
+        
+        public System.Threading.Tasks.Task<byte[]> DoImageSearchAsync(long id) {
+            return base.Channel.DoImageSearchAsync(id);
         }
     }
 }

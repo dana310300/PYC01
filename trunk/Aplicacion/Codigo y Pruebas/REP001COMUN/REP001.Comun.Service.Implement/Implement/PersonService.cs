@@ -7,6 +7,7 @@ using REP001.Comun.BO.Context;
 using REP001.Comun.Service.Interface;
 using System.Data.Entity;
 using System.Data;
+using System.Data.Entity.Validation;
 
 
 namespace REP001.Comun.Service.Implement
@@ -19,8 +20,10 @@ namespace REP001.Comun.Service.Implement
         {
             db.Person.Add(p);
             db.SaveChanges();
-            Person person = db.Person.Find(p);
-            return person;
+            string str = ValidatePersonProperty(p);
+            if (str.Length > 0) { throw new Exception(str); }
+          
+            return db.Person.FirstOrDefault(x=>x.Name==p.Name && x.LastName==p.LastName && x.DateBird == p.DateBird && x.Email==p.Email);
             //return new Person { ID = 1, Name = "Daniela", DateBird = DateTime.Parse(string.Format("{0:MM/dd/yyyy}", "03/31/1985")) };
         }
 
@@ -57,7 +60,6 @@ namespace REP001.Comun.Service.Implement
             //base.Dispose(disposing);
         }
 
-
         public void Edit(Person p)
         {
             if (p != null && p.ID != null)
@@ -67,11 +69,44 @@ namespace REP001.Comun.Service.Implement
             }
         }
 
-
         public List<Person> RetrievePersonsByName(string name)
         {
             List<Person> lspersons = db.Person.Where(x => x.Name.Contains(name)).ToList();
             return lspersons;
+        }
+
+        private string ValidatePersonProperty(Person p) 
+        {
+            ICollection<DbValidationError> results;
+            string sError = string.Empty;
+            using (var context = new ComunContext())
+            {
+              results= context.Entry(p).Property(a => a.Name).GetValidationErrors();
+            }
+            foreach (DbValidationError item in results)
+            {
+                sError += item.PropertyName + " : " + item.ErrorMessage;
+            }
+
+            return sError;
+        }
+
+        private string ValidatePerson(Person p) 
+        {
+            DbEntityValidationResult results;
+            string sError = string.Empty;
+            using (ComunContext context = new ComunContext()) 
+            {
+               results= context.Entry(p).GetValidationResult(); 
+            }
+
+            foreach (var error in results.ValidationErrors)
+            {
+                sError += error.PropertyName + " : " + error.ErrorMessage;   
+            }
+
+            return sError;
+        
         }
     }
 }

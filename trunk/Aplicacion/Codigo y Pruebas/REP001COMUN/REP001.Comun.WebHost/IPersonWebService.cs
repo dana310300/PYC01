@@ -13,5 +13,11 @@ namespace REP001.Comun.WebHost
     {
         [OperationContract]
         List<PersonInfo> DoSearchByName(string name);
+
+        [OperationContract]
+        List<string> DoSearchByID(long id);
+
+        [OperationContract]
+        byte[] DoImageSearch(long id);
     }
 }

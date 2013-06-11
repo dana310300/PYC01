@@ -17,6 +17,14 @@
         @Html.DisplayFor(model => model.Name)
     </div>
 
+     <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+
     <div class="display-label">
          @Html.DisplayNameFor(model => model.DateBird)
     </div>
@@ -32,17 +40,10 @@
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.LastName)
+        @Html.DisplayNameFor(model => model.Email)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.LastName)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.ImgUrl)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.ImgUrl)
+        @Html.DisplayFor(model=>model.Email)
     </div>
 </fieldset>
 @using (Html.BeginForm()) {

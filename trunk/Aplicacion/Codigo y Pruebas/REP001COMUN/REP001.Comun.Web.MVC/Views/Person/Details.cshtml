@@ -1,4 +1,5 @@
-﻿@model REP001.Comun.BO.Person
+﻿
+@model REP001.Comun.BO.Person
 
 @{
     ViewBag.Title = "Details";
@@ -7,6 +8,11 @@
 <h2>Details</h2>
 
 <fieldset>
+
+    <div>
+       @* @Html.Action("PersonInfoPhoto","Person")*@
+   @*   @Html.Partial("PersonInfo")*@
+    </div>
     <legend>Person</legend>
 
     <div class="display-label">
@@ -14,6 +20,13 @@
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
     </div>
 
     <div class="display-label">
@@ -31,17 +44,17 @@
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.LastName)
+         @Html.DisplayNameFor(model => model.Email)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.LastName)
+        @Html.DisplayFor(model => model.Email)
     </div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.ImgUrl)
+     <div class="display-label">
+         @Html.DisplayNameFor(model => model.ImgDir)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.ImgUrl)
+        @Html.DisplayFor(model => model.ImgDir)
     </div>
 </fieldset>
 <p>

@@ -185,6 +185,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -266,8 +267,8 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-2.2.0.debug.js" />
-    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\knockout-2.2.1.debug.js" />
+    <Content Include="Scripts\knockout-2.2.1.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Service References\PersonWebServiceReference\PersonWebService.disco" />
     <Content Include="Service References\PersonWebServiceReference\configuration91.svcinfo" />
@@ -323,6 +324,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\PersonWebServiceReference\PersonWebService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonWebServiceReference\PersonWebService3.xsd">
       <SubType>Designer</SubType>
     </None>
     <Content Include="Service References\PersonWebServiceReference\REP001.Comun.WebClient.MVC.PersonWebServiceReference.PersonInfo.datasource">

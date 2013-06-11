@@ -413,6 +413,20 @@ fieldset {
         fieldset ol li {
             padding-bottom: 5px;
         }
+   fieldset div.editor-label
+    {
+        display: block;
+        font-size: 1.2em;
+        font-weight: 600;
+        float:left;
+    }
+    fieldset div.editor-field
+    {
+        display: block;
+        font-size: 1.2em;
+        font-weight: 600;
+        clear:left;
+    }
 
 label {
     display: block;

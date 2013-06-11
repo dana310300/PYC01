@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using REP001.Comun.BO;
 using REP001.Comun.BO.Context;
+using REP001.Comun.Service.Interface;
+using REP001.Comun.Service.Implement;
+
 
 namespace REP001.Comun.Web.MVC.Controllers
 {
     public class PersonController : Controller
     {
         private ComunContext db = new ComunContext();
-
+        private PersonService personCtrl = new PersonService();
         //
         // GET: /Person/
 
@@ -50,10 +55,12 @@ namespace REP001.Comun.Web.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Person person)
         {
+
             if (ModelState.IsValid)
             {
-                db.Person.Add(person);
-                db.SaveChanges();
+                personCtrl.Create(person);
+                //db.Person.Add(person);
+                //db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -115,10 +122,44 @@ namespace REP001.Comun.Web.MVC.Controllers
             return RedirectToAction("Index");
         }
 
+        public async Task<ActionResult> PersonInfoPhoto() {
+
+            List<Task> tasks = new List<Task>();
+
+            using (WebClient webClient = new WebClient()) {
+                Uri uri1 = new Uri(PersonImgServiceUrl);
+                tasks.Add(webClient.DownloadDataTaskAsync(uri1));
+            }
+            await Task.WhenAll(tasks);
+
+            string imageBase64 = Convert.ToBase64String(((Task<byte[]>)tasks[0]).Result);
+            string imageSrc = string.Format("data:image/jpeg;base64,{0}", imageBase64);
+            ViewBag.Photo = imageSrc;
+
+            return View("PersonInfo");
+        }
+
+        private string PersonImgServiceUrl
+        {
+            get
+            {
+                return string.Concat(getRootUrl(),Url.Content("~/Content/Images/flower01.jpg"));
+            }
+        }
+
+        private string getRootUrl()
+        {
+            string scheme = Request.Url.GetComponents(UriComponents.Scheme, UriFormat.SafeUnescaped);
+            string rootURL = Request.Url.GetComponents(UriComponents.HostAndPort, UriFormat.SafeUnescaped);
+            return string.Concat(scheme, "://", rootURL, "/");
+        }
+
         protected override void Dispose(bool disposing)
         {
             db.Dispose();
             base.Dispose(disposing);
         }
+
+      
     }
 }

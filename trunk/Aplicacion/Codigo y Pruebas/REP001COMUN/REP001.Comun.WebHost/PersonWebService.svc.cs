@@ -14,33 +14,43 @@ namespace REP001.Comun.WebHost
     {
         public List<PersonInfo> DoSearchByName(string name)
         {
-
-            //List<Person> p = new List<Person>();
-            //p.Add(new Person { ID = 1, Name = "Daniela", LastName = "Avila", DateBird = DateTime.Today.AddYears(-20) });
-
-            //List<PersonInfo> pinf = new List<PersonInfo>();
-            //foreach (Person pi in p)
-            //{
-            //    pinf.Add(new PersonInfo
-            //    {
-            //        ID = pi.ID,
-            //        Name = pi.Name,
-            //        DateBird = pi.DateBird,
-            //        LastName = pi.LastName
-            //    });
-            //}
-            //return pinf;
             PersonInfo p = new PersonInfo { Name = "Daniela Avila Franco" };
             List<PersonInfo> ls = new List<PersonInfo>();
             ls.Add(p);
             return ls;
-            
            
+        }
+
+
+        public List<string> DoSearchByID(long id)
+        {
+            List<string> ls = new List<string>();
+            for (int i = 0; i < 5; i++) {
+
+                ls.Add("Daniela Avila " + i);
+            }
+            return ls;
+        }
+
+        public byte[] ImageDoSearchByName(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public byte[] DoImageSearch(long id)
+        {
+            throw new NotImplementedException();
         }
     }
 
     public class PersonInfo {
 
         public string Name { get; set; }
+        public string Ap1 { get; set; }
+        public string Ap2 { get; set; }
+        public DateTime BirdDay { get; set; }
+        public string ImgDir { get; set; }
+        public byte[] Img { get; set; }
     }
 }

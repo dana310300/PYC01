@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/REP001.Comun.WebHost" />
+      <xsd:import schemaLocation="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IPersonWebService_DoSearchByName_InputMessage">
@@ -13,16 +14,54 @@
   <wsdl:message name="IPersonWebService_DoSearchByName_OutputMessage">
     <wsdl:part name="parameters" element="tns:DoSearchByNameResponse" />
   </wsdl:message>
+  <wsdl:message name="IPersonWebService_DoSearchByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoSearchByID" />
+  </wsdl:message>
+  <wsdl:message name="IPersonWebService_DoSearchByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoSearchByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonWebService_DoImageSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoImageSearch" />
+  </wsdl:message>
+  <wsdl:message name="IPersonWebService_DoImageSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoImageSearchResponse" />
+  </wsdl:message>
   <wsdl:portType name="IPersonWebService">
     <wsdl:operation name="DoSearchByName">
       <wsdl:input wsaw:Action="http://tempuri.org/IPersonWebService/DoSearchByName" message="tns:IPersonWebService_DoSearchByName_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPersonWebService/DoSearchByNameResponse" message="tns:IPersonWebService_DoSearchByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonWebService/DoSearchByID" message="tns:IPersonWebService_DoSearchByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonWebService/DoSearchByIDResponse" message="tns:IPersonWebService_DoSearchByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoImageSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonWebService/DoImageSearch" message="tns:IPersonWebService_DoImageSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonWebService/DoImageSearchResponse" message="tns:IPersonWebService_DoImageSearch_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IPersonWebService" type="tns:IPersonWebService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="DoSearchByName">
       <soap:operation soapAction="http://tempuri.org/IPersonWebService/DoSearchByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchByID">
+      <soap:operation soapAction="http://tempuri.org/IPersonWebService/DoSearchByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoImageSearch">
+      <soap:operation soapAction="http://tempuri.org/IPersonWebService/DoImageSearch" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

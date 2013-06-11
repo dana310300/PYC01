@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9497aefd-a225-43dc-a7fd-ffb62a724262" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c86f5aa8-a478-4f80-84ec-3711ea741e0a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,12 @@
     <MetadataSource Address="http://localhost/REP001.Comun.WebHost/PersonWebService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PersonWebService.disco" MetadataType="Disco" ID="ec81e028-d425-49fd-b7b8-e584d1b0c28f" SourceId="1" SourceUrl="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?disco" />
-    <MetadataFile FileName="PersonWebService.xsd" MetadataType="Schema" ID="1c143496-fbd0-482e-a512-5ecf3003a04b" SourceId="1" SourceUrl="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?xsd=xsd2" />
-    <MetadataFile FileName="PersonWebService.wsdl" MetadataType="Wsdl" ID="ceb7f563-2978-4f91-8294-4d41dbb50093" SourceId="1" SourceUrl="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?wsdl" />
-    <MetadataFile FileName="PersonWebService1.xsd" MetadataType="Schema" ID="ee6fb219-7018-4ba0-a0da-b135b8422add" SourceId="1" SourceUrl="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?xsd=xsd1" />
-    <MetadataFile FileName="PersonWebService2.xsd" MetadataType="Schema" ID="6d314b67-c272-4ded-8ce2-1a3b4b18f33b" SourceId="1" SourceUrl="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PersonWebService.xsd" MetadataType="Schema" ID="8b4a7bea-2a7f-468d-9b04-45167d8945d4" SourceId="1" SourceUrl="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PersonWebService1.xsd" MetadataType="Schema" ID="b9a173c8-4044-4d71-8b78-f38d045db4e5" SourceId="1" SourceUrl="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PersonWebService.wsdl" MetadataType="Wsdl" ID="02594ab8-46e4-40d1-9c20-607da0fea574" SourceId="1" SourceUrl="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?wsdl" />
+    <MetadataFile FileName="PersonWebService2.xsd" MetadataType="Schema" ID="0e3a0afa-235c-48f2-930f-08e57fed28b8" SourceId="1" SourceUrl="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PersonWebService.disco" MetadataType="Disco" ID="0dddd4cd-b34f-40b5-b104-4e58b370f229" SourceId="1" SourceUrl="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?disco" />
+    <MetadataFile FileName="PersonWebService3.xsd" MetadataType="Schema" ID="aad53a0d-1978-4c6d-aee6-2be8f6b37d36" SourceId="1" SourceUrl="http://localhost/REP001.Comun.WebHost/PersonWebService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -82,3 +82,4 @@ C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebClient.MVC\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebClient.MVC\obj\Debug\REP001.Comun.WebClient.MVC.dll
 C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebClient.MVC\obj\Debug\REP001.Comun.WebClient.MVC.pdb
+C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebClient.MVC\obj\Debug\REP001.Comun.WebClient.MVC.csprojResolveAssemblyReference.cache

@@ -8,6 +8,11 @@
   <xs:element name="ArrayOfPersonInfo" nillable="true" type="tns:ArrayOfPersonInfo" />
   <xs:complexType name="PersonInfo">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Ap1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ap2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BirdDay" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Img" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ImgDir" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

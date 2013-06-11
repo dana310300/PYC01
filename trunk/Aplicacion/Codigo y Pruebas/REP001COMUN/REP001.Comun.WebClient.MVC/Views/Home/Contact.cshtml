@@ -2,6 +2,10 @@
     ViewBag.Title = "Contact";
 }
 
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryui")
+@Scripts.Render("~/bundles/knockout")
+
 <hgroup class="title">
     <h1>@ViewBag.Title.</h1>
     <h2>@ViewBag.Message</h2>
@@ -23,17 +27,7 @@
 </section>
 
 <section class="contact">
-    <header>
-        <h3>Información del usuario</h3>
-        <p>
-            
-                <span>
-                @ViewBag.PersonInfo
-                </span>
-            
-        </p>
-
-    </header>
+   
     <header>
         <h3>Email</h3>
     </header>
@@ -52,6 +46,27 @@
 </section>
 
 <section class="contact">
+
+     <header>
+        <h3>Información de contacto</h3>
+    </header>
+    <p>
+        <span class="label">
+            Name:
+        </span>
+        <span>
+             @ViewBag.PersonInfo
+        </span>
+    </p>
+    
+    <header>
+        <h3>Consultar Información del usuario</h3>
+    </header>
+    <p>
+        <input type="button" name="btn" id="btn1" value="Consulta Infor Usuario" />
+        <br />  <span id="info"> </span>     
+    </p>
+
     <header>
         <h3>Address</h3>
     </header>
@@ -60,3 +75,33 @@
         Redmond, WA 98052-6399
     </p>
 </section>
+
+
+<script type="text/javascript">
+
+    $(function () {
+
+        $("#btn1").on('click', function (e) {
+            e.preventDefault();
+            searchName();
+        });       
+    });
+
+    function searchName() {
+        $.ajax({
+            url: '/api/person',
+            type: 'GET',
+            dataType: 'json',
+            data: {},
+        }).done(function (data) {
+            var name = '';
+            $.each(data, function (index, val) {
+                console.log(val);
+                name += val.Name + "<br/>";
+            });
+
+            $('#info').html(name);
+        });
+
+    }
+</script>

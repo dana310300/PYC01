@@ -37,14 +37,24 @@
             @Html.ValidationMessageFor(model => model.LastName)
         </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.ImgUrl)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.ImgUrl)
-            @Html.ValidationMessageFor(model => model.ImgUrl)
+         <div class="editor-label">
+           @Html.EditorFor(model=>model.Email)
+       </div>
+       <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
         </div>
 
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ImgDir)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ImgDir)
+            @Html.ValidationMessageFor(model => model.ImgDir)
+        </div>
+
+      
         <p>
             <input type="submit" value="Create" />
         </p>
