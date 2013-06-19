@@ -169,9 +169,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Employee.cs" />
-    <Compile Include="Models\Person.cs" />
-    <Compile Include="Models\REP001\Comun\WebAPI\MVC\EmployeeContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -297,23 +294,32 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
-    <Content Include="Views\Employee\Details.cshtml" />
-    <Content Include="Views\Employee\Create.cshtml" />
-    <Content Include="Views\Employee\Edit.cshtml" />
-    <Content Include="Views\Employee\Delete.cshtml" />
     <Content Include="Views\Employee\Person.cshtml" />
     <Content Include="Views\Employee\Imagen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\REP001.Comun.BO.Context\REP001.Comun.BO.Context.csproj">
+      <Project>{1c7441fa-b864-4c72-a246-0817ecd63ead}</Project>
+      <Name>REP001.Comun.BO.Context</Name>
+    </ProjectReference>
     <ProjectReference Include="..\REP001.Comun.BO\REP001.Comun.BO.csproj">
       <Project>{7a892e6a-f200-4ffe-bc86-a187e6f11cf4}</Project>
       <Name>REP001.Comun.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\REP001.Comun.Service.Implement\REP001.Comun.Service.Implement.csproj">
+      <Project>{bf921742-ea91-44c8-b687-207513aadd2e}</Project>
+      <Name>REP001.Comun.Service.Implement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\REP001.Comun.Service.Interface\REP001.Comun.Service.Interface.csproj">
+      <Project>{b74b9d64-693f-442c-afcc-a86df70e0e55}</Project>
+      <Name>REP001.Comun.Service.Interface</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

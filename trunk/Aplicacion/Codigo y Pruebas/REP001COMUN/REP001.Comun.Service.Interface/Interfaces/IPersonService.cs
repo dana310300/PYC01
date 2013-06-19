@@ -13,5 +13,7 @@ namespace REP001.Comun.Service.Interface
         void Edit(Person p);
         List<Person> RetrievePersons();
         List<Person> RetrievePersonsByName(string name);
+        Person RetrievePersonById(long ID);
+        void Dispose();
     }
 }

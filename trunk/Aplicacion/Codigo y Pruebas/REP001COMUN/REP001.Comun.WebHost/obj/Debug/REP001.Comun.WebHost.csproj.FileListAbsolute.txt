@@ -1,7 +1,0 @@
-C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebHost\bin\REP001.Comun.WebHost.dll
-C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebHost\bin\REP001.Comun.WebHost.pdb
-C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebHost\bin\REP001.Comun.BO.dll
-C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebHost\bin\REP001.Comun.BO.pdb
-C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebHost\obj\Debug\REP001.Comun.WebHost.dll
-C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebHost\obj\Debug\REP001.Comun.WebHost.pdb
-C:\Users\davila\Documents\GitHub\REP001\trunk\Aplicacion\Codigo y Pruebas\REP001COMUN\REP001.Comun.WebHost\obj\Debug\REP001.Comun.WebHost.csprojResolveAssemblyReference.cache

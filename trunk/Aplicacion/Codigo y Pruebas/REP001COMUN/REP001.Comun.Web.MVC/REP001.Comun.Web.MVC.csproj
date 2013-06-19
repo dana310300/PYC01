@@ -188,6 +188,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Comun\ComunAreaRegistration.cs" />
     <Compile Include="Areas\Comun\Controllers\EmployeeController.cs" />
+    <Compile Include="Areas\Comun\Controllers\PaisController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArtistDashboardController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
@@ -285,6 +286,14 @@
     <Content Include="Areas\Comun\Views\_ViewStart.cshtml" />
     <Content Include="WebService\ComunService.svc" />
     <Content Include="Areas\Comun\Views\Employee\_PersonSearchPartial.cshtml" />
+    <Content Include="Areas\Comun\Views\Pais\Index.cshtml" />
+    <Content Include="Areas\Comun\Views\Pais\Details.cshtml" />
+    <Content Include="Areas\Comun\Views\Pais\Create.cshtml" />
+    <Content Include="Areas\Comun\Views\Pais\Edit.cshtml" />
+    <Content Include="Areas\Comun\Views\Pais\Delete.cshtml" />
+    <Content Include="Areas\Comun\Views\Shared\_LoginPartial.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />

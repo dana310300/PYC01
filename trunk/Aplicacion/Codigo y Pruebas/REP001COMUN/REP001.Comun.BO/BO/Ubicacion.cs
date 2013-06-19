@@ -8,7 +8,7 @@ namespace REP001.Comun.BO
 {
     public class Ubicacion
     {
-       public long UbicacionID { get; set; }
+       public long? UbicacionID { get; set; }
        public DateTime FechaRegistro { get; set; }
        public bool Activo {get; set;}
        public Person Person { get; set; }

@@ -6,7 +6,6 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Mvc;
-using REP001.Comun.WebAPI.MVC.Models;
 using REP001.Comun.BO;
 namespace REP001.Comun.WebAPI.MVC.Controllers
 {

@@ -62,9 +62,45 @@ namespace REP001.Comun.BO.Context
 
         }
 
+      
+
+
         public override int SaveChanges()
         {
-              return base.SaveChanges();
+            var autoDetectChanges = Configuration.AutoDetectChangesEnabled;
+            int affectedEntitiesCount = 0;
+            try
+            {
+
+                Configuration.AutoDetectChangesEnabled = false;
+
+                ChangeTracker.DetectChanges();
+
+                var errors = GetValidationErrors().ToList();
+                if (errors.Any())
+                {
+                    throw new DbEntityValidationException("Validation error found during saving", errors);
+                }
+
+                Configuration.ValidateOnSaveEnabled = false;
+                affectedEntitiesCount = base.SaveChanges();
+
+                foreach (var entry in this.ChangeTracker.Entries().Where(x => x.State == EntityState.Added || x.State == EntityState.Modified))
+                {
+
+                    //Se puede realizar un log o algo asi
+                }
+                return affectedEntitiesCount;
+            }
+            catch (Exception e)
+            {
+              
+            }
+            finally {
+                Configuration.AutoDetectChangesEnabled = autoDetectChanges;
+            }
+
+            return affectedEntitiesCount;
         }
 
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Index Sin Area</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -17,18 +17,7 @@
         <th>
             @Html.DisplayNameFor(model => model.PayMent)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Position)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateBird)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Age)
-        </th>
+     
         <th></th>
     </tr>
 
@@ -40,22 +29,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.Position)
         </td>
+
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td >
-            @Html.DisplayFor(modelItem =>item.EmployeeID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateBird)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Age)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new {  id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new {  id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new {  id=item.ID })
+            @Html.ActionLink("Edit", "Edit", new {  id=item.EmployeeID }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.EmployeeID }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.EmployeeID })
         </td>
     </tr>
 }

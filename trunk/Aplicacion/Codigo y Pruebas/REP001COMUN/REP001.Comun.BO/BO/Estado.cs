@@ -8,7 +8,7 @@ namespace REP001.Comun.BO
 {
    public class Estado
     {
-        public int ID { get; set; }
+        public int? ID { get; set; }
         public string Name { get; set; }
         public string Clave { get; set; }
         public string Descripcion { get; set; }

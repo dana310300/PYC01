@@ -17,40 +17,56 @@ namespace REP001.Comun.Web.MVC.Controllers
 {
     public class PersonController : Controller
     {
-        private ComunContext db = new ComunContext();
-        private PersonService personCtrl = new PersonService();
+       // private ComunContext db = new ComunContext();
+        private IPersonService _personCtrl;
+       // private PersonController personController;
+
+
+        //Construtor necesario para las pruebas
+        public PersonController(IPersonService personCtrl) 
+        {
+            _personCtrl = personCtrl;
+        
+        }
+
+        public PersonController() : this(new PersonService()) { }
+
+       
+        //private PersonService personCtrl = new PersonService();
+
         //
         // GET: /Person/
 
         public ActionResult Index()
         {
-            return View(db.Person.ToList());
+            return View("Index", _personCtrl.RetrievePersons());
+
+            //ViewResult vw = View(db.Person.ToList());
+            //vw.ViewName = "Index";
+            //return vw;
         }
 
         //
         // GET: /Person/Details/5
-
         public ActionResult Details(long id = 0)
         {
-            Person person = db.Person.Find(id);
+            Person person = _personCtrl.RetrievePersonById(id);
             if (person == null)
             {
                 return HttpNotFound();
             }
-            return View(person);
+            return View("Details",person);
         }
 
         //
         // GET: /Person/Create
-
         public ActionResult Create()
         {
-            return View();
+            return View("Create");
         }
 
         //
         // POST: /Person/Create
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Person person)
@@ -58,42 +74,42 @@ namespace REP001.Comun.Web.MVC.Controllers
 
             if (ModelState.IsValid)
             {
-                personCtrl.Create(person);
+                _personCtrl.Create(person);
+                //personCtrl.Create(person);
                 //db.Person.Add(person);
                 //db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(person);
+            return View("Create",person);
         }
 
         //
         // GET: /Person/Edit/5
-
         public ActionResult Edit(long id = 0)
         {
-            Person person = db.Person.Find(id);
+            Person person = _personCtrl.RetrievePersonById(id);
             if (person == null)
             {
                 return HttpNotFound();
             }
-            return View(person);
+            return View("Edit",person);
         }
 
         //
         // POST: /Person/Edit/5
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Person person)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(person).State = EntityState.Modified;
-                db.SaveChanges();
+                _personCtrl.Edit(person);
+                //db.Entry(person).State = EntityState.Modified;
+                //db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(person);
+            return View("Edit",person);
         }
 
         //
@@ -101,25 +117,34 @@ namespace REP001.Comun.Web.MVC.Controllers
 
         public ActionResult Delete(long id = 0)
         {
-            Person person = db.Person.Find(id);
+            Person person = _personCtrl.RetrievePersonById(id);
             if (person == null)
             {
                 return HttpNotFound();
             }
-            return View(person);
+            return View("Delete",person);
         }
 
         //
         // POST: /Person/Delete/5
-
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(long id=0)
         {
-            Person person = db.Person.Find(id);
-            db.Person.Remove(person);
-            db.SaveChanges();
+            Person person = _personCtrl.RetrievePersonById(id);
+            _personCtrl.Delete(person);
+            //db.Person.Remove(person);
+            //db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _personCtrl.Dispose();
+            }
+            //db.Dispose();
+            base.Dispose(disposing);
         }
 
         public async Task<ActionResult> PersonInfoPhoto() {
@@ -138,7 +163,6 @@ namespace REP001.Comun.Web.MVC.Controllers
 
             return View("PersonInfo");
         }
-
         private string PersonImgServiceUrl
         {
             get
@@ -146,7 +170,6 @@ namespace REP001.Comun.Web.MVC.Controllers
                 return string.Concat(getRootUrl(),Url.Content("~/Content/Images/flower01.jpg"));
             }
         }
-
         private string getRootUrl()
         {
             string scheme = Request.Url.GetComponents(UriComponents.Scheme, UriFormat.SafeUnescaped);
@@ -154,11 +177,7 @@ namespace REP001.Comun.Web.MVC.Controllers
             return string.Concat(scheme, "://", rootURL, "/");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            db.Dispose();
-            base.Dispose(disposing);
-        }
+        
 
       
     }
