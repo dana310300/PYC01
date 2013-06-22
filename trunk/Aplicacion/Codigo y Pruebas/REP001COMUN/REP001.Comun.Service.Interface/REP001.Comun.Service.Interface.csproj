@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IEmployeeService.cs" />
     <Compile Include="Interfaces\IPaisService.cs" />
     <Compile Include="Interfaces\IPersonService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,9 +1,26 @@
-﻿@{
+﻿@model IEnumerable<REP001.Comun.BO.Person>
+
+@{
     ViewBag.Title = "_PersonSearchPartial";
 }
 
-<h2>_PersonSearchParcial</h2>
 <div>
-    <label>Nombre</label>
-    <input type="text"  />
+
+    <div class="editor-label">
+          
+            @Html.Label("Persona")
+        </div>
+        <div class="editor-field">
+
+        <select id="ddlperson">
+            <option value="0">Seleccione</option>
+
+            @foreach ( var item in Model ) {
+                <option value="@(item.ID)">@item.Name  @item.LastName</option>
+            }
+        
+        </select>
+        </div>
+    
+
 </div>

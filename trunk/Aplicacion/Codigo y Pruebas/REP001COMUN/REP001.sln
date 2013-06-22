@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP001.Comun.WebClient.MVC"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP001.Comun.Test", "REP001.Comun.Test\REP001.Comun.Test.csproj", "{4280B951-4574-4A09-B376-BA8F38A4165C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP001.Comun.Helpers", "REP001.Comun.Helpers\REP001.Comun.Helpers.csproj", "{425291B0-2AFA-408B-B37A-117E9C905B4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -98,6 +100,10 @@ Global
 		{4280B951-4574-4A09-B376-BA8F38A4165C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4280B951-4574-4A09-B376-BA8F38A4165C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4280B951-4574-4A09-B376-BA8F38A4165C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{425291B0-2AFA-408B-B37A-117E9C905B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{425291B0-2AFA-408B-B37A-117E9C905B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{425291B0-2AFA-408B-B37A-117E9C905B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{425291B0-2AFA-408B-B37A-117E9C905B4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,13 +12,13 @@
 
     <fieldset>
         <legend>Employee</legend>
-        <div class="editor-label">
-            Persona
-        </div>
-        <div class="editor-label">
-            @Html.Action("PersonSearchPartial","Employee")  
 
+        <div>
+             @Html.Action("PersonSearchPartial")  
+
+            @Html.HiddenFor(model => model.Person.ID, new { id = "hdPerson" })
         </div>
+      <br />
         <div class="editor-label">
             @Html.LabelFor(model => model.PayMent)
         </div>
@@ -36,7 +36,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Create" id="btnsubmit" />
         </p>
     </fieldset>
 }
@@ -48,3 +48,23 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+<script type="text/ecmascript">
+    $(function () {
+        $('#btnsubmit').on('click', function (e) {
+            e.preventDefault();
+             
+            var selected = $('select[id$=ddlperson] :selected').val();
+
+            var hdperson = $('#hdPerson');
+                hdperson.val(selected);
+
+            console.log(selected);
+            console.log(hdperson);
+
+            return true;
+        });
+
+       
+    });
+</script>

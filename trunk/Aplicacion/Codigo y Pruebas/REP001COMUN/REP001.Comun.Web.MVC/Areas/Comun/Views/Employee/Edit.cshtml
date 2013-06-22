@@ -15,6 +15,16 @@
 
         @Html.HiddenFor(model => model.EmployeeID)
 
+        
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.Person.Name)
+        </div>
+        <div class="display-file">
+            @Html.DisplayFor(model => model.Person.Name) 
+            @Html.DisplayFor(model=>model.Person.LastName)
+            
+        </div>
+
         <div class="editor-label">
             @Html.LabelFor(model => model.PayMent)
         </div>

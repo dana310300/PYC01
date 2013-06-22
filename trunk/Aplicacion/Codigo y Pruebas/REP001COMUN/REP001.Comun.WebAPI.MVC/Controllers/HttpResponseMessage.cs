@@ -10,7 +10,7 @@ namespace REP001.Comun.WebAPI.MVC.Controllers
     {
         private Person person;
         private System.Net.HttpStatusCode httpStatusCode;
-        private Person person1;
+        //private Person person1;
 
        public HttpResponseMessage(Person person, System.Net.HttpStatusCode httpStatusCode)
        {

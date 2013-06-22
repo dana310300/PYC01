@@ -16,6 +16,7 @@ namespace REP001.Comun.BO.Context
             : base("DefaultConnection")
         {
             this.Configuration.ValidateOnSaveEnabled = true;
+            this.Configuration.LazyLoadingEnabled = true;
         }
         public DbSet<Person> Person { get; set; }
         public DbSet<Employee> Employee { get; set; }
@@ -76,10 +77,16 @@ namespace REP001.Comun.BO.Context
 
                 ChangeTracker.DetectChanges();
 
-                var errors = GetValidationErrors().ToList();
+                List<DbEntityValidationResult> errors = GetValidationErrors().ToList();
                 if (errors.Any())
                 {
-                    throw new DbEntityValidationException("Validation error found during saving", errors);
+                    foreach (DbEntityValidationResult  item in errors ) {
+                       
+                        foreach ( DbValidationError itemer in item.ValidationErrors ) {
+                            throw new DbEntityValidationException("Validation error found during saving" +itemer.ErrorMessage);
+                        }
+                    }
+                   
                 }
 
                 Configuration.ValidateOnSaveEnabled = false;
@@ -94,7 +101,7 @@ namespace REP001.Comun.BO.Context
             }
             catch (Exception e)
             {
-              
+                throw;
             }
             finally {
                 Configuration.AutoDetectChangesEnabled = autoDetectChanges;

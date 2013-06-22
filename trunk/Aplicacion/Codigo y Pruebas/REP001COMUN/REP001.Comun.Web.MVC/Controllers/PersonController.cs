@@ -29,7 +29,10 @@ namespace REP001.Comun.Web.MVC.Controllers
         
         }
 
-        public PersonController() : this(new PersonService()) { }
+        public PersonController() {
+            _personCtrl = new PersonService();
+        }
+        //public PersonController() : this(new PersonService()) { }
 
        
         //private PersonService personCtrl = new PersonService();
@@ -74,6 +77,7 @@ namespace REP001.Comun.Web.MVC.Controllers
 
             if (ModelState.IsValid)
             {
+                _personCtrl = new PersonService();
                 _personCtrl.Create(person);
                 //personCtrl.Create(person);
                 //db.Person.Add(person);

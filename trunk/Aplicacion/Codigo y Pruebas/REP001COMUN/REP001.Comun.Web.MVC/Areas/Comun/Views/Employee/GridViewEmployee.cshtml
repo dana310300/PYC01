@@ -1,0 +1,76 @@
+﻿@model IEnumerable<REP001.Comun.BO.Employee>
+
+@{
+    ViewBag.Title = "GridViewEmployee";
+}
+
+<h2>Ejemplo GridView Employee</h2>
+
+<table class="grid FullWidth">
+    <tr>
+
+        <th>
+           <label></label>
+        </th>
+        <th>
+            @Html.ActionLink("ID", "GridViewEmployee", new {Page=1,Sort="EmployeeID"})
+        </th>
+
+        <th>
+            @Html.ActionLink("Person", "GridViewEmployee", new {Page=1,Sort="Person.Name" })
+        </th>
+
+        <th>
+            @Html.ActionLink("Position", "GridViewEmployee", new {Page=1,Sort="Position" })
+        </th>
+       
+    </tr>
+    @foreach ( var item in Model) {
+        <tr>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeID})
+            </td>
+            <td>
+                @item.EmployeeID
+            </td>
+            <td>
+                <ul class="ItemList">
+                    <li>
+                       @item.Person.Name   @item.Person.LastName                  
+
+                    </li>
+                    <li>
+                        @item.Person.DateBird
+                    </li>
+                    <li>
+                        @item.Person.Age
+                    </li>
+                </ul>
+               
+            </td>
+            <td>
+
+                @item.Position
+            </td>
+        </tr>
+        
+    }
+</table>
+<div class="Pager">
+    @{
+        int numr = ViewBag.NumberOfResults;
+        int items = ViewBag.ItemsPerPage;
+        int current = ViewBag.CurrentPage;
+      }
+
+    @Html.CreateNumericPager(numr,items,current)
+   @* @Html.CreateNumericPager(@Int32.Parse(@ViewBag.NumberOfResults), @Int32.Parse(@ViewBag.ItemsPerPage),@Int32.Parse(@ViewBag.CurrentPage))*@
+
+</div>
+
+<script>
+    $(function () {
+        $("tr:even").addClass("even");
+        $("tr:odd").addClass("odd");
+    });
+</script>

@@ -193,6 +193,7 @@
     <Compile Include="Controllers\ArtistDashboardController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PersonApiController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -212,6 +213,7 @@
     <Content Include="Areas\Comun\Views\Shared\_Layout.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Content\Controls.css" />
     <Content Include="Content\Images\flower01.jpg" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -294,6 +296,7 @@
     <Content Include="Areas\Comun\Views\Shared\_LoginPartial.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Areas\Comun\Views\Employee\GridViewEmployee.cshtml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -379,6 +382,10 @@
     <ProjectReference Include="..\REP001.Comun.BO\REP001.Comun.BO.csproj">
       <Project>{7a892e6a-f200-4ffe-bc86-a187e6f11cf4}</Project>
       <Name>REP001.Comun.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\REP001.Comun.Helpers\REP001.Comun.Helpers.csproj">
+      <Project>{425291b0-2afa-408b-b37a-117e9c905b4a}</Project>
+      <Name>REP001.Comun.Helpers</Name>
     </ProjectReference>
     <ProjectReference Include="..\REP001.Comun.Service.Implement\REP001.Comun.Service.Implement.csproj">
       <Project>{bf921742-ea91-44c8-b687-207513aadd2e}</Project>

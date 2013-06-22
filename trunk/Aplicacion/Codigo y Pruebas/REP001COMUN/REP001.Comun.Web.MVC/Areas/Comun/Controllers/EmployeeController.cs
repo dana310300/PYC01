@@ -7,7 +7,8 @@ using System.Web;
 using System.Web.Mvc;
 using REP001.Comun.BO;
 using REP001.Comun.BO.Context;
-
+using REP001.Comun.Service.Implement;
+using REP001.Comun.Helpers;
 namespace REP001.Comun.Web.MVC.Areas.Comun.Controllers
 {
     public class EmployeeController : Controller
@@ -52,6 +53,7 @@ namespace REP001.Comun.Web.MVC.Areas.Comun.Controllers
         {
             if (ModelState.IsValid)
             {
+              
                 db.Employee.Add(employee);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -65,7 +67,8 @@ namespace REP001.Comun.Web.MVC.Areas.Comun.Controllers
 
         public ActionResult Edit(long id = 0)
         {
-            Employee employee = db.Employee.Find(id);
+            EmployeeService employeeCtrl = new EmployeeService();
+            Employee employee = employeeCtrl.RetrieveComplete(new Employee { EmployeeID = id });
             if (employee == null)
             {
                 return HttpNotFound();
@@ -118,9 +121,43 @@ namespace REP001.Comun.Web.MVC.Areas.Comun.Controllers
 
         public ActionResult PersonSearchPartial()
         {
+            PersonService personCtrl = new PersonService();
+            List<Person> ls = personCtrl.RetrievePersons();
+
+            return PartialView("_PersonSearchPartial",ls);
+        }
+
+        [HttpPost]
+        public ActionResult PersonSearchPartial(Person p)
+        {
+            //PersonService personCtrl = new PersonService();
+            //List<Person> ls = personCtrl.RetrievePersons();
+
             return PartialView("_PersonSearchPartial");
         }
-       
+
+        public ActionResult GridViewEmployee(int? Page,string Sort) {
+
+            int page = Page ?? 1;
+            string sort = string.IsNullOrEmpty(Sort) ? "EmployeeID" :Sort;
+           // long selected = selected != null ? (long)selected : 0;
+            int count = 2;
+            int resultcount;
+            //long employeeId = EmployeeId.HasValue ? EmployeeId.Value : 0;
+         
+
+            EmployeeService employeeCtrl = new EmployeeService();
+            List<Employee> ls = employeeCtrl.RetrieveEmployees(page, count, sort, false,out resultcount);
+
+            ViewBag.NumberOfResults = resultcount;
+            ViewBag.ItemsPerPage = count;
+            ViewBag.CurrentPage = page;
+
+            return View("GridViewEmployee",ls);
+        }
+
+      
+
         protected override void Dispose(bool disposing)
         {
             db.Dispose();

@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BF921742-EA91-44C8-B687-207513AADD2E}</ProjectGuid>
+    <ProjectGuid>{425291B0-2AFA-408B-B37A-117E9C905B4A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>REP001.Comun.Service.Implement</RootNamespace>
-    <AssemblyName>REP001.Comun.Service.Implement</AssemblyName>
+    <RootNamespace>REP001.Comun.Helpers</RootNamespace>
+    <AssemblyName>REP001.Comun.Helpers</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +20,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,16 +28,13 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,32 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implement\EmployeeService.cs" />
-    <Compile Include="Implement\PaisService.cs" />
-    <Compile Include="Implement\PersonService.cs" />
+    <Compile Include="GridHelper.cs" />
+    <Compile Include="LinqExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\REP001.Comun.BO.Context\REP001.Comun.BO.Context.csproj">
-      <Project>{1c7441fa-b864-4c72-a246-0817ecd63ead}</Project>
-      <Name>REP001.Comun.BO.Context</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\REP001.Comun.BO\REP001.Comun.BO.csproj">
-      <Project>{7a892e6a-f200-4ffe-bc86-a187e6f11cf4}</Project>
-      <Name>REP001.Comun.BO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\REP001.Comun.Helpers\REP001.Comun.Helpers.csproj">
-      <Project>{425291b0-2afa-408b-b37a-117e9c905b4a}</Project>
-      <Name>REP001.Comun.Helpers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\REP001.Comun.Service.Interface\REP001.Comun.Service.Interface.csproj">
-      <Project>{b74b9d64-693f-442c-afcc-a86df70e0e55}</Project>
-      <Name>REP001.Comun.Service.Interface</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
