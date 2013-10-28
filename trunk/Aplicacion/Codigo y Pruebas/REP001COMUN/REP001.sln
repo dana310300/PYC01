@@ -38,6 +38,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP001.Comun.Test", "REP001
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP001.Comun.Helpers", "REP001.Comun.Helpers\REP001.Comun.Helpers.csproj", "{425291B0-2AFA-408B-B37A-117E9C905B4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP001.Comun.AplicacionConsola", "REP001.Comun.AplicacionConsola\REP001.Comun.AplicacionConsola.csproj", "{C5125247-4EC0-41AD-A9AE-521B4C31DDFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,10 @@ Global
 		{425291B0-2AFA-408B-B37A-117E9C905B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{425291B0-2AFA-408B-B37A-117E9C905B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{425291B0-2AFA-408B-B37A-117E9C905B4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5125247-4EC0-41AD-A9AE-521B4C31DDFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5125247-4EC0-41AD-A9AE-521B4C31DDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5125247-4EC0-41AD-A9AE-521B4C31DDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5125247-4EC0-41AD-A9AE-521B4C31DDFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
