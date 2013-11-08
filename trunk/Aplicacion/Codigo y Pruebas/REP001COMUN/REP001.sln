@@ -40,6 +40,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP001.Comun.Helpers", "REP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP001.Comun.AplicacionConsola", "REP001.Comun.AplicacionConsola\REP001.Comun.AplicacionConsola.csproj", "{C5125247-4EC0-41AD-A9AE-521B4C31DDFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP001.Comun.Utilities", "REP001.Comun.Utilities\REP001.Comun.Utilities.csproj", "{C4067739-D62F-455C-9213-BBA760616C6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -110,6 +112,10 @@ Global
 		{C5125247-4EC0-41AD-A9AE-521B4C31DDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5125247-4EC0-41AD-A9AE-521B4C31DDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5125247-4EC0-41AD-A9AE-521B4C31DDFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4067739-D62F-455C-9213-BBA760616C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4067739-D62F-455C-9213-BBA760616C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4067739-D62F-455C-9213-BBA760616C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4067739-D62F-455C-9213-BBA760616C6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

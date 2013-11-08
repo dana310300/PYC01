@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using REP001.Comun;
+using REP001.Comun.BO;
+using REP001.Comun.Utilities.math;
 
 namespace REP001.Comun.AplicacionConsola
 {
@@ -13,7 +16,7 @@ namespace REP001.Comun.AplicacionConsola
         static void Main(string[] args)
         {
 
-
+            #region **** Test Thread-Events****
             #region *****Thread 01:Simple*********
             //
             //Thread t = new Thread(new ThreadStart(ComunThreading.ThreadMethod));
@@ -136,29 +139,98 @@ namespace REP001.Comun.AplicacionConsola
             #endregion
 
             #region **********Thread 08:Task<T> WaitAny
-            Task<int>[] tasks = new Task<int>[3];
+            //Task<int>[] tasks = new Task<int>[3];
 
-            tasks[0] = Task.Run(() => { Thread.Sleep(2000); return 1; });
-            tasks[1] = Task.Run(() => { Thread.Sleep(1000); return 2; });
-            tasks[2] = Task.Run(()=>{Thread.Sleep(3000);return 3;});
+            //tasks[0] = Task.Run(() => { Thread.Sleep(2000); return 1; });
+            //tasks[1] = Task.Run(() => { Thread.Sleep(1000); return 2; });
+            //tasks[2] = Task.Run(()=>{Thread.Sleep(3000);return 3;});
 
-            //Procesa el Task apenas finaliza
-            while (tasks.Length > 0)
+            ////Procesa el Task apenas finaliza
+            //while (tasks.Length > 0)
+            //{
+            //    int i = Task.WaitAny(tasks);
+            //    Task<int> completedTask = tasks[i];
+            //    Console.WriteLine(completedTask.Result);
+            //    var temp = tasks.ToList();
+            //    temp.RemoveAt(i);
+            //    tasks = temp.ToArray();
+            //}
+            //Console.ReadLine();
+            #endregion
+
+            #region******Thread 09:Async and Wait
+            //string result = ComunThreading.DownloadContent().Result;
+            //Console.WriteLine(result);
+            #endregion
+
+            #region ***** Events and callbacks:simple delegate and events******
+            //Employee employee = new Employee {Person = new Person {Name = "Daniela", LastName = "Avila"}};
+
+            ////Event raise on GeneratePayment
+            //employee.OnGeneratePayMent += () => Console.WriteLine(string.Format("El pago de {0} {1} fue calculado en un total de {2}", employee.Person.Name, employee.Person.LastName, employee.PayMent));
+            ////delegate payment
+            //employee.GeneratePayment(15);
+
+            ////remove de others subscribes by using = instead of +=
+            //employee.OnGeneratePayMent = () => Console.WriteLine(string.Format("El pago de {0} {1} fue recalcualdo en un total de {2}", employee.Person.Name, employee.Person.LastName, employee.PayMent));
+
+            ////new function for delete payment 
+            //employee.CalculatePayMent = (x) => (Decimal.Round(x*90)  - (Decimal.Round((x*89))*(decimal) .16));
+
+            ////Events with EventHandler
+            //employee.OnGeneratePayMentEvent += (sender, e) => Console.WriteLine(string.Format("Subscripción 1: al evento GeneratePayMent de {0} {1} pago total={2}", e.Employee.Person.Name, e.Employee.Person.LastName, e.Employee.PayMent));
+            //employee.OnGeneratePayMentEvent += (sender, e) => Console.WriteLine(string.Format("Subscripción 2: al evento GeneratePayMent de {0} {1} pago total={2}", e.Employee.Person.Name, e.Employee.Person.LastName, e.Employee.PayMent));
+
+            //employee.GeneratePayment(15);
+            #endregion
+
+            #region ***** Events and callbacks:safe events*******
+
+            //Employee employee = new Employee {Person = new Person {Name = "Daniela", LastName = "Avila"}};
+            //// Suscribe to Events with EventHandler
+            //employee.OnGeneratePayMentEvent += (sender, e) => Console.WriteLine(string.Format("Subscripción 1: al evento GeneratePayMent de {0} {1} pago total={2}", e.Employee.Person.Name, e.Employee.Person.LastName, e.Employee.PayMent));
+            //employee.OnGeneratePayMentEvent += (sender, e) => { throw new Exception("Error en un evento"); };
+            //employee.OnGeneratePayMentEvent += (sender, e) => { throw new Exception("Error en otro evento"); };
+            //employee.OnGeneratePayMentEvent += (sender, e) => Console.WriteLine(string.Format("Subscripción 2: al evento GeneratePayMent de {0} {1} pago total={2}", e.Employee.Person.Name, e.Employee.Person.LastName, e.Employee.PayMent));
+
+            //try
+            //{
+            //    employee.GeneratePayment(15);
+            //}
+            //catch (AggregateException ex)
+            //{
+
+            //    foreach (Exception s in ex.InnerExceptions)
+            //    {
+            //        Console.WriteLine(s.Message);
+            //    }
+            //}
+
+
+            #endregion
+            #endregion
+
+
+            #region **** Test Utilities****
+
+            //var valores = new List<int> { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,21,22,23,24,25 };
+            //var funcMcm = new MinimoComunMultiplo();
+            //double total =funcMcm.CalcularMinimoComunMultiplo(valores);
+            //Console.WriteLine(total);
+
+            var calculo=new CalculoMatematicos();
+
+            //Calculo de espirales de 3x3
+            List<long> result = calculo.CalcularSumaDiagonales(4);
+            long total = 1;
+            foreach (long l in result)
             {
-                int i = Task.WaitAny(tasks);
-                Task<int> completedTask = tasks[i];
-                Console.WriteLine(completedTask.Result);
-                var temp = tasks.ToList();
-                temp.RemoveAt(i);
-                tasks = temp.ToArray();
+                total = total+ l;
+                Console.WriteLine(l);
             }
+            #endregion
+            Console.WriteLine(total);
             Console.ReadLine();
-            #endregion
-
-            #region******Thread 09:Async and Wait 
-            string result = ComunThreading.DownloadContent().Result;
-            Console.WriteLine(result);
-            #endregion
         }
     }
 }

@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml.Linq" />
@@ -42,12 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculoMatematicos.cs" />
     <Compile Include="ComunThreading.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\REP001.Comun.BO\REP001.Comun.BO.csproj">
+      <Project>{7a892e6a-f200-4ffe-bc86-a187e6f11cf4}</Project>
+      <Name>REP001.Comun.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\REP001.Comun.Utilities\REP001.Comun.Utilities.csproj">
+      <Project>{C4067739-D62F-455C-9213-BBA760616C6A}</Project>
+      <Name>REP001.Comun.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
