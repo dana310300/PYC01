@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="file\FileContent.cs" />
+    <Compile Include="math\CalculosComunes.cs" />
     <Compile Include="math\MinimoComunMultiplo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
